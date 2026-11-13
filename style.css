@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #111;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 5px solid #f4c400;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #ddd;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.box {
+    background-color: white;
+    border: 2px solid #111;
+    border-left: 6px solid #f4c400;
+    padding: 20px;
+    flex: 1;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.tracker {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.form-box,
+.expense-box,
+.category-box {
+    background-color: white;
+    border: 2px solid #111;
+    padding: 25px;
+}
+
+.form-box {
+    width: 35%;
+}
+
+.expense-box {
+    width: 65%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f4c400;
+    padding-bottom: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #777;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #f4c400;
+    border-color: #111;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #f4c400;
+    color: #111;
+    border: 2px solid #111;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #111;
+    color: white;
+}
+
+.expense-item {
+    border: 1px solid #ccc;
+    border-left: 5px solid #f4c400;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-info h3 {
+    margin-bottom: 5px;
+}
+
+.expense-info p {
+    color: #555;
+    font-size: 14px;
+}
+
+.expense-amount {
+    text-align: right;
+}
+
+.expense-amount strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.delete-btn {
+    width: auto;
+    margin: 0;
+    padding: 6px 10px;
+    background-color: #111;
+    color: white;
+    border: none;
+    font-size: 13px;
+}
+
+.delete-btn:hover {
+    background-color: #f4c400;
+    color: #111;
+}
+
+.empty {
+    color: #777;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.category-box {
+    margin-top: 25px;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.categories div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    flex: 1;
+    min-width: 130px;
+    background-color: #fafafa;
+}
+
+.categories span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.categories strong {
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #f4c400;
+}
+
+@media (max-width: 800px) {
+
+    .summary,
+    .tracker {
+        flex-direction: column;
+    }
+
+    .form-box,
+    .expense-box {
+        width: 100%;
+    }
+
+    .expense-item {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .expense-amount {
+        text-align: left;
+    }
+}
